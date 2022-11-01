@@ -35,4 +35,6 @@
 - `git push` to push the committed git changes to a remote git
 - `git log` to read all historical logs
 - `git checkout <git id from git logs>` to see the old changes, then checkout with `git checkout master`
+- `git checkout <branch name>` to change branch
+- `git merge <branch name>` to merge branches
 
