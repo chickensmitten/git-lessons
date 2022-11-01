@@ -36,5 +36,5 @@
 - `git log` to read all historical logs
 - `git checkout <git id from git logs>` to see the old changes, then checkout with `git checkout master`
 - `git checkout <branch name>` to change branch
-- `git merge <branch name>` to merge branches
+- `git merge <branch name>` to merge the named branch with the branch that you are currently on
 
