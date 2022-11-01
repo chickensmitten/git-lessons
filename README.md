@@ -24,3 +24,15 @@
 - moving a file from old folder to new folder `mv <old folder name>/<file name 1> <new folder name>/`
 - moving multiple files from old folder to new folder `mv -r <old folder name>/ <new folder name>/`
 - renaming files with `mv`. `mv <old file name> <new file name>`
+
+## Version Management Git
+**Git Commands**
+- `git init` to create git
+- `git status` to check current git status
+- `git add .` to add all changes to git staging
+- `git add <filename>` to add a changed file to git staging
+- `git commit -m "<your message here>"` to commit changes from staging
+- `git push` to push the committed git changes to a remote git
+- `git log` to read all historical logs
+- `git checkout <git id from git logs>` to see the old changes, then checkout with `git checkout master`
+
