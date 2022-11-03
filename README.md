@@ -86,4 +86,5 @@ No additional commit in master branch. The non-master branch can then merge with
 There are additional commits in both the master and the non-master branch.
 
 **Rebase**
-- `git rebase`
+current branch is updated with the rebased branch. All commits and staging will be moved forward.
+- `git rebase master` current branch rebase with master branch. If master branch is ahead of current branch, current branch will pull the commits that are ahead and put it before the current branch's commits and staging.
