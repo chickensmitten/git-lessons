@@ -64,4 +64,5 @@
 
 **.gitignore**
 - Add file path into `.gitignore` file to ignore a certain file
-
+- use `*.<file-format>` to ignore all files of that format
+- user `!<file-name>` to say that this file shouldn't be ignored
