@@ -26,6 +26,8 @@
 - renaming files with `mv`. `mv <old file name> <new file name>`
 
 ## Version Management Git
+There are generally three git stages. Unstaged, staged, committed. The entire command is to navigate them.
+
 **Git Commands**
 - `git init` to create git
 - `git status` to check current git status
@@ -66,3 +68,12 @@
 - Add file path into `.gitignore` file to ignore a certain file
 - use `*.<file-format>` to ignore all files of that format
 - user `!<file-name>` to say that this file shouldn't be ignored
+
+## Advanced Git
+- `git stash` to save unstaged and uncommited files
+- `git stash push -m "<stash message>"` to save a stash with message
+- `git stash list` to list all the stashed files
+- `git stash apply <number in the stash list>` to apply the saved stash. numbers are either `1`, `2` etc
+- `git stash drop <number>` to delete selected stash
+- `git stash clear` to delete all stash.
+- `git reflog` to see an overview of all the changes applied to a branch, rolling back 30 days. Can then use detached head instructions above to renable lost branches
