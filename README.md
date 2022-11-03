@@ -41,5 +41,27 @@
 - `git switch -c <new branch name>` this will create a new branch and switch to it
 - `git ls-files` shows the files in staging through `add .`
 - `git rm <files>` to remove the file from staging
-- 
+
+**Remove or undo unstaged changes**
+- `git checkout <text file name to undo>` undo unstaged changes in one file
+- `git checkout .` undo unstaged changes in all files
+- `git restore <text file name to undo>` undo unstaged changes in one file
+- `git restore .` undo unstaged changes in all files
+
+**Remove or undo staged changes**
+- `git reset <text file>` copy latest committed change to the staging. So this effectively reverses stage changes. Then use `git checkout <text file>`
+- `git restore --staged <text file>` then use `git checkout <text file>` to unstage the staged changes
+
+**Remove or undo committed changes**
+- `git reset --soft HEAD~1` this reverts the commit by one step. if it is `2` then reverts the commit by two step. but retain the changes in the working directory or staged changes.
+- `git reset --hard HEAD~1` reverts the commit and also remove the staged changes
+
+**Deleting branches**
+- `git branch -D <branch name>`
+
+**Committing detached head changes**
+- From the master branch, after switching to a previous commit as a detached head, then you make changes to that commit, stage it then commit it, you will effectively create another branch just for that detached head. But requires you to explicit create a branch with `git branch <new-branch-name> <detached HEAD ID>`, then you can merge with master with `git merge <new-branch-name>`
+
+**.gitignore**
+- Add file path into `.gitignore` file to ignore a certain file
 
