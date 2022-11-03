@@ -69,7 +69,8 @@ There are generally three git stages. Unstaged, staged, committed. The entire co
 - use `*.<file-format>` to ignore all files of that format
 - user `!<file-name>` to say that this file shouldn't be ignored
 
-## Advanced Git
+## Advance Git
+**Saving progress without staging and committing**
 - `git stash` to save unstaged and uncommited files
 - `git stash push -m "<stash message>"` to save a stash with message
 - `git stash list` to list all the stashed files
@@ -77,3 +78,12 @@ There are generally three git stages. Unstaged, staged, committed. The entire co
 - `git stash drop <number>` to delete selected stash
 - `git stash clear` to delete all stash.
 - `git reflog` to see an overview of all the changes applied to a branch, rolling back 30 days. Can then use detached head instructions above to renable lost branches
+
+**Fast Forward Type Merge**
+No additional commit in master branch. The non-master branch can then merge with the master branch
+
+**Recursive Type Merge**
+There are additional commits in both the master and the non-master branch.
+
+**Rebase**
+- `git rebase`
