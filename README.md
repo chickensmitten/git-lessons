@@ -37,4 +37,9 @@
 - `git checkout <git id from git logs>` to see the old changes, then checkout with `git checkout master`
 - `git checkout <branch name>` to change branch
 - `git merge <branch name>` to merge the named branch with the branch that you are currently on
+- `git switch <exiting branch name>` this will change to an existing branch
+- `git switch -c <new branch name>` this will create a new branch and switch to it
+- `git ls-files` shows the files in staging through `add .`
+- `git rm <files>` to remove the file from staging
+- 
 
