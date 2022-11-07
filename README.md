@@ -88,3 +88,35 @@ There are additional commits in both the master and the non-master branch.
 **Rebase**
 current branch is updated with the rebased branch. All commits and staging will be moved forward.
 - `git rebase master` current branch rebase with master branch. If master branch is ahead of current branch, current branch will pull the commits that are ahead and put it before the current branch's commits and staging.
+
+## Git with Github
+- Branch names local and remote name should be the same so that there is not commit error.
+
+**Branch Types**
+- Local branch: Branch on your machine only
+- Remote branch: Branch in remote location
+- Remote tracking branch: local copy of a remote branch (not to be edited) `git fetch` to get its data
+- Local tracking Branch: local reference to remote tracking branch (to be edited)
+
+**Git Commands for githubs**
+- `git branch -r` shows all remote branch
+- `git branch -a` shows all branches
+- `git branch -vv` to see more details of your branches
+- `git remote add origin <URL>` adding a local repo with github repo. If you haven't setup before, you might need personal access token to push to the repo
+- `git push origin master` pushing code up to the remote master repo
+- `git pull origin master` pulling code from the remote master repo
+- `git push origin <branch-name>` creates a new remote tracking branch
+- `git push` or `git pull` without origin name will push or pull code from the remote branch that is directly connected
+- `git ls-remote` shows all remote branch by querying from github. 
+- `git fetch origin` fetches all remote branches and create them locally and updates remote tracking branches. git pull only works if you have a direct connection to a local branch here.
+- `git branch --track <local tracking branch name> origin/<remote tracking branch name>` 
+- `git clone <.git URL>` to get repo from remote repo.
+- `git push -u origin <branch name>` creates a local tracking branch with this command. Always use `git branch -vv` to have a better understanding of which local branch tracks which remote branch.
+- `git branch --delete --remotes <remote branch name>` to remove remote branch in the local repo files
+- `git push origin --delete <remote branch name>` to remove remote branch in the remote repo files
+- `git reset --hard HEAD~1` to reset back by one head
+- `git push --force origin master` will update remote branch, this will also change for others.
+
+
+
+
