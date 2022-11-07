@@ -98,6 +98,34 @@ current branch is updated with the rebased branch. All commits and staging will 
 - Remote tracking branch: local copy of a remote branch (not to be edited) `git fetch` to get its data
 - Local tracking Branch: local reference to remote tracking branch (to be edited)
 
+A **local branch** is a branch that only you (the local user) can see. It exists only on your local machine.
+
+    git branch myNewBranch        # Create local branch named "myNewBranch"
+
+A **remote branch** is a branch on a remote location (in most cases `origin`). You can push the newly created local branch `myNewBranch` to `origin`. Now other users can track it.
+
+    git push -u origin myNewBranch   # Pushes your newly created local branch "myNewBranch"
+                                     # to the remote "origin".
+                                     # So now a new branch named "myNewBranch" is
+                                     # created on the remote machine named "origin"
+
+A **remote tracking branch** is a local copy of a remote branch. When `myNewBranch` is pushed to `origin` using the command above, a remote tracking branch named `origin/myNewBranch` is created on your machine. This remote tracking branch tracks the remote branch `myNewBranch` on `origin`. You can update your **remote tracking branch** to be in sync with the **remote branch** using `git fetch` or `git pull`.
+
+    git pull origin myNewBranch      # Pulls new commits from branch "myNewBranch" 
+                                     # on remote "origin" into remote tracking
+                                     # branch on your machine "origin/myNewBranch".
+                                     # Here "origin/myNewBranch" is your copy of
+                                     # "myNewBranch" on "origin"
+    
+A **local tracking branch** is a **local branch** that is tracking another branch. This is so that you can push/pull commits to/from the other branch. Local tracking branches in most cases track a remote tracking branch. When you push a local branch to `origin` using the `git push` command with a `-u` option (as shown above), you set up the local branch `myNewBranch` to track the remote tracking branch `origin/myNewBranch`. This is needed to use `git push` and `git pull` without specifying an upstream to push to or pull from.
+
+    git checkout myNewBranch      # Switch to myNewBranch
+    git pull                      # Updates remote tracking branch "origin/myNewBranch"
+                                  # to be in sync with the remote branch "myNewBranch"
+                                  # on "origin".
+                                  # Pulls these new commits from "origin/myNewBranch"
+                                  # to local branch "myNewBranch which you just switched to.
+
 **Git Commands for githubs**
 - `git branch -r` shows all remote branch
 - `git branch -a` shows all branches
