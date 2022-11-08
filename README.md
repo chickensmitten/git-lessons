@@ -145,6 +145,12 @@ A **local tracking branch** is a **local branch** that is tracking another branc
 - `git reset --hard HEAD~1` to reset back by one head
 - `git push --force origin master` will update remote branch, this will also change for others.
 
-
+## Github Contribution Process
+1. fork the repo on github
+2. `git clone <.git url>` the forked repo to local copy
+3. contribute code
+4. push the code to forked repo
+5. request pull request with the original remote repo
+6. then accept pull request
 
 
